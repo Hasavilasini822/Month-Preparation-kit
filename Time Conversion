@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        String result="";
+        if(str.charAt(8)=='P')
+        {
+            if(str.charAt(0)=='1' && str.charAt(1)=='2'){
+                result=str.substring(0,8);
+            } 
+            else
+            {
+                String time=str.substring(2,8);
+                int text=12+Integer.parseInt(str.substring(0,2));
+                result=text+time;
+            }
+        }
+        else
+        {
+            if(str.charAt(0)=='1' && str.charAt(1)=='2')
+            {
+                result= "00" + str.substring(2,8);
+            } 
+            else
+            {
+                result=str.substring(0,8);    
+            }
+        }
+        System.out.print(result);
+    }
+}
